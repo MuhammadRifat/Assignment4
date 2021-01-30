@@ -32,7 +32,7 @@
             <h3>Booking Flights</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
             </div>
             <div class="input-group">
                 <label for="">Flying To</label>
@@ -54,8 +54,8 @@
                     <input class="inp-style inp-width" type="number" id="input-firstClass" name="" value="0">
                 </div>
                 <div>
-                    <button onclick="plusMinus('input-firstClass', 150, true)" class="plus-minus-btn">+</button>
-                    <button onclick="plusMinus('input-firstClass', 150, false)"  class="plus-minus-btn">-</button>
+                    <button onclick="plusMinus('input-firstClass', true)" class="plus-minus-btn">+</button>
+                    <button onclick="plusMinus('input-firstClass', false)"  class="plus-minus-btn">-</button>
                 </div>
             </div>
             
@@ -65,8 +65,8 @@
                     <input class="inp-style inp-width" type="number" id="input-economy" name="" value="0">
                 </div>
                 <div>
-                    <button onclick="plusMinus('input-economy', 100, true)"  class="plus-minus-btn">+</button>
-                    <button onclick="plusMinus('input-economy', 100, false)"  class="plus-minus-btn">-</button>
+                    <button onclick="plusMinus('input-economy', true)"  class="plus-minus-btn">+</button>
+                    <button onclick="plusMinus('input-economy', false)"  class="plus-minus-btn">-</button>
                 </div>
             </div>
             <div class="calculations">
@@ -106,27 +106,35 @@
         </div>
     </main>
 
+    <!-- Receipt Section -->
     <section id="receipt" class="receipt-table">
-        <table border="1">
+        <table>
+            <caption>Receipt</caption>
             <tr>
-                <th>First Class ($150):</th>
-                <th>4</th>
+                <th>First Class ($150): (Total Seat)</th>
+                <td id="receipt-firstClass"></td>
             </tr>
             <tr>
-                <th>Economy ($100):</th>
-                <th></th>
+                <th>Economy ($100): (Total Seat)</th>
+                <td id="receipt-economy"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><hr></td>
             </tr>
             <tr>
                 <th>Subtotal:</th>
-                <th></th>
+                <td id="receipt-subtotal"></td>
             </tr>
             <tr>
-                <th>Charge 10% VAT</th>
-                <th></th>
+                <th>Charge 10% VAT:</th>
+                <td id="receipt-vat"></td>
             </tr>
             <tr>
-                <th>Total</th>
-                <th></th>
+                <td colspan="2"><hr></td>
+            </tr>
+            <tr>
+                <th>Total:</th>
+                <td id="receipt-total"></td>
             </tr>
         </table>
     </section>
